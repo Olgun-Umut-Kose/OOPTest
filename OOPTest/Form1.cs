@@ -15,9 +15,6 @@ namespace OOPTest
     public partial class Form1 : Form
     {
         Dictionary<int, ICredit> pairs = new Dictionary<int, ICredit>();
-        VehicleCredit vehicleCredit = new VehicleCredit();
-        HouseCredit houseCredit = new HouseCredit();
-        PersonalFinanceCredit personalFinanceCredit = new PersonalFinanceCredit();
         List<ICredit> credits = new List<ICredit>();
         ICredit credit;
         public Form1()
@@ -54,18 +51,18 @@ namespace OOPTest
 
         private void cbTasit_CheckedChanged(object sender, EventArgs e)
         {
-            credits.Add(vehicleCredit);
+            credits.Add(new VehicleCredit());
         }
 
         private void cbKonut_CheckedChanged(object sender, EventArgs e)
         {
-            credits.Add(houseCredit);
+            credits.Add(new HouseCredit());
         }
 
         private void cbIhtiyac_CheckedChanged(object sender, EventArgs e)
         {
 
-            credits.Add(personalFinanceCredit);
+            credits.Add(new PersonalFinanceCredit());
 
         }
         private void btnOnBilgi_Click(object sender, EventArgs e)
