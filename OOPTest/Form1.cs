@@ -66,34 +66,22 @@ namespace OOPTest
 
         private void cbKonut_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbKonut.Checked)
-            {
-                credits.Add(houseCredit);
-            }
-            else
-            {
-                credits.Remove(houseCredit);
-            }
+            credits.Add(houseCredit);
         }
 
         private void cbIhtiyac_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbIhtiyac.Checked)
-            {
-                credits.Add(personalFinanceCredit);
-            }
-            else
-            {
-                credits.Remove(personalFinanceCredit);
-            }
-        }
 
+            credits.Add(personalFinanceCredit);
+
+        }
         private void btnOnBilgi_Click(object sender, EventArgs e)
         {
             BasvuruManager.OnBilgilendirmeYap(credits);
             cbIhtiyac.Checked = false;
             cbKonut.Checked = false;
             cbTasit.Checked = false;
+            credits.Clear();
 
         }
     }
