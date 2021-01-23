@@ -54,14 +54,7 @@ namespace OOPTest
 
         private void cbTasit_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbTasit.Checked)
-            {
-                credits.Add(vehicleCredit);
-            }
-            else
-            {
-                credits.Remove(vehicleCredit);
-            }
+            credits.Add(vehicleCredit);
         }
 
         private void cbKonut_CheckedChanged(object sender, EventArgs e)
