@@ -91,6 +91,10 @@ namespace OOPTest
         private void btnOnBilgi_Click(object sender, EventArgs e)
         {
             BasvuruManager.OnBilgilendirmeYap(credits);
+            cbIhtiyac.Checked = false;
+            cbKonut.Checked = false;
+            cbTasit.Checked = false;
+
         }
     }
 }
